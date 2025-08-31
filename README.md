@@ -10,7 +10,9 @@
 - **Professional UI**: Multi-tab interface with sortable data tables
 - **Full Stack**: End-to-end data science project from analysis to deployment
 
-## 🚀 Live Demo
-```r
-# Clone and run locally:
-source("nba_analytics_dashboard.R")
+## 🚀 View Live Dashboard
+**[Click here to see the interactive dashboard](https://theomarabbasi.github.io/NBA-Performance-Analytics-Dashboard/nba_complete_dashboard.html)**
+
+## 💻 Run Locally
+1. Download `nba_analytics_dashboard.R`
+2. Run in RStudio for the full Shiny application
