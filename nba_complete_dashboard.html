@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<style>body{background-color:white;}</style>
+<link href="lib/htmltools-fill-0.5.8.1/fill.css" rel="stylesheet" />
+<script src="lib/htmlwidgets-1.6.4/htmlwidgets.js"></script>
+<script src="lib/plotly-binding-4.11.0/plotly.js"></script>
+<script src="lib/typedarray-0.1/typedarray.min.js"></script>
+<script src="lib/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<link href="lib/crosstalk-1.2.2/css/crosstalk.min.css" rel="stylesheet" />
+<script src="lib/crosstalk-1.2.2/js/crosstalk.min.js"></script>
+<link href="lib/plotly-htmlwidgets-css-2.11.1/plotly-htmlwidgets.css" rel="stylesheet" />
+<script src="lib/plotly-main-2.11.1/plotly-latest.min.js"></script>
+<link href="lib/datatables-css-0.0.0/datatables-crosstalk.css" rel="stylesheet" />
+<script src="lib/datatables-binding-0.33/datatables.js"></script>
+<link href="lib/dt-core-1.13.6/css/jquery.dataTables.min.css" rel="stylesheet" />
+<link href="lib/dt-core-1.13.6/css/jquery.dataTables.extra.css" rel="stylesheet" />
+<script src="lib/dt-core-1.13.6/js/jquery.dataTables.min.js"></script>
+  <title>NBA Player Performance Analytics Dashboard</title>
+  <style>
+      body { font-family: 'Arial', sans-serif; margin: 40px; background-color: #f5f5f5; }
+      .header { background-color: #2c3e50; color: white; padding: 20px; border-radius: 8px; margin-bottom: 20px; }
+      .section { background-color: white; padding: 20px; border-radius: 8px; margin-bottom: 20px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+      .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin: 20px 0; }
+      .stat-card { background-color: #3498db; color: white; padding: 15px; border-radius: 8px; text-align: center; }
+      .stat-number { font-size: 24px; font-weight: bold; }
+      .stat-label { font-size: 14px; opacity: 0.9; }
+    </style>
+</head>
+<body>
+<div class="header">
+  <h1>🏀 NBA Player Performance Analytics Dashboard</h1>
+  <p>Interactive analysis of NBA superstar performance metrics and efficiency ratings</p>
+</div>
+<div class="section">
+  <h2>📊 Performance Overview</h2>
+  <div class="stats-grid">
+    <div class="stat-card">
+      <div class="stat-number">5</div>
+      <div class="stat-label">Players Analyzed</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-number">28.8</div>
+      <div class="stat-label">Avg Points/Game</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-number">68.8</div>
+      <div class="stat-label">Highest Efficiency</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-number">6.2</div>
+      <div class="stat-label">Avg Assists/Game</div>
+    </div>
+  </div>
+</div>
+<div class="section">
+  <h2>📈 Interactive Performance Analysis</h2>
+  <p>Hover over data points to see detailed player statistics. Point size represents assists per game.</p>
+  <div class="plotly html-widget html-fill-item" id="htmlwidget-85817302759401f665b9" style="width:100%;height:400px;"></div>
+  <script type="application/json" data-for="htmlwidget-85817302759401f665b9">{"x":{"data":[{"x":[25.699999999999999,26.399999999999999,28.199999999999999,31.100000000000001,32.399999999999999],"y":[58.899999999999999,60.799999999999997,63,66.099999999999994,68.799999999999997],"text":["Player: LeBron James <br>Team: LAL <br>Points: 25.7 <br>Assists: 7.3 <br>Efficiency: 58.9","Player: Stephen Curry <br>Team: GSW <br>Points: 26.4 <br>Assists: 5.1 <br>Efficiency: 60.8","Player: Kevin Durant <br>Team: PHX <br>Points: 28.2 <br>Assists: 5 <br>Efficiency: 63","Player: Giannis Antetokounmpo <br>Team: MIL <br>Points: 31.1 <br>Assists: 5.7 <br>Efficiency: 66.1","Player: Luka Doncic <br>Team: DAL <br>Points: 32.4 <br>Assists: 8 <br>Efficiency: 68.8"],"type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(0,0,139,1)","opacity":0.69999999999999996,"size":[20.32620540039521,7.229748393733324,3.7795275590551185,12.907953855867364,22.677165354330711],"symbol":"circle","line":{"width":1.8897637795275593,"color":"rgba(0,0,139,1)"}},"hoveron":"points","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null}],"layout":{"margin":{"t":45.746002348742074,"r":7.3059360730593621,"b":38.44670803574914,"l":48.949771689497723},"font":{"color":"rgba(0,0,0,1)","family":"","size":14.611872146118724},"title":{"text":"<b> NBA Player Performance Analysis <\/b>","font":{"color":"rgba(0,0,0,1)","family":"","size":21.253632212536321},"x":0,"xref":"paper"},"xaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[25.364999999999998,32.734999999999999],"tickmode":"array","ticktext":["27","29","31"],"tickvals":[27,29,31],"categoryorder":"array","categoryarray":["27","29","31"],"nticks":null,"ticks":"","tickcolor":null,"ticklen":3.6529680365296811,"tickwidth":0,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.68949771689498},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(235,235,235,1)","gridwidth":0.66417600664176002,"zeroline":false,"anchor":"y","title":{"text":"Points Per Game","font":{"color":"rgba(0,0,0,1)","family":"","size":14.611872146118724}},"hoverformat":".2f"},"yaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[58.405000000000001,69.295000000000002],"tickmode":"array","ticktext":["60.0","62.5","65.0","67.5"],"tickvals":[60,62.5,65,67.5],"categoryorder":"array","categoryarray":["60.0","62.5","65.0","67.5"],"nticks":null,"ticks":"","tickcolor":null,"ticklen":3.6529680365296811,"tickwidth":0,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.68949771689498},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(235,235,235,1)","gridwidth":0.66417600664176002,"zeroline":false,"anchor":"x","title":{"text":"Efficiency Rating","font":{"color":"rgba(0,0,0,1)","family":"","size":14.611872146118724}},"hoverformat":".2f"},"shapes":[{"type":"rect","fillcolor":null,"line":{"color":null,"width":0,"linetype":[]},"yref":"paper","xref":"paper","layer":"below","x0":0,"x1":1,"y0":0,"y1":1}],"showlegend":false,"legend":{"bgcolor":null,"bordercolor":null,"borderwidth":0,"font":{"color":"rgba(0,0,0,1)","family":"","size":11.68949771689498},"title":{"text":"Assists per Game","font":{"color":"rgba(0,0,0,1)","family":"","size":14.611872146118724}}},"hovermode":"closest","barmode":"relative"},"config":{"doubleClick":"reset","modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"source":"A","attrs":{"13df17459e7f4":{"x":{},"y":{},"size":{},"text":{},"type":"scatter"}},"cur_data":"13df17459e7f4","visdat":{"13df17459e7f4":["function (y) ","x"]},"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+</div>
+<div class="section">
+  <h2>📋 Complete Player Statistics</h2>
+  <p>Sortable and searchable table of all player performance metrics.</p>
+  <div class="datatables html-widget html-fill-item" id="htmlwidget-89270420b066e36ce948" style="width:100%;height:auto;"></div>
+  <script type="application/json" data-for="htmlwidget-89270420b066e36ce948">{"x":{"filter":"none","vertical":false,"data":[["1","2","3","4","5"],["LeBron James","Stephen Curry","Kevin Durant","Giannis Antetokounmpo","Luka Doncic"],["LAL","GSW","PHX","MIL","DAL"],[25.7,26.4,28.2,31.1,32.4],[7.3,5.1,5,5.7,8],[8.5,4.5,6.7,11,8.199999999999999],[58.9,60.8,63,66.09999999999999,68.8]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>Player<\/th>\n      <th>Team<\/th>\n      <th>Points/Game<\/th>\n      <th>Assists/Game<\/th>\n      <th>Rebounds/Game<\/th>\n      <th>Efficiency Rating<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":10,"searching":true,"ordering":true,"columnDefs":[{"className":"dt-right","targets":[3,4,5,6]},{"orderable":false,"targets":0},{"name":" ","targets":0},{"name":"player_name","targets":1},{"name":"team","targets":2},{"name":"points_per_game","targets":3},{"name":"assists_per_game","targets":4},{"name":"rebounds_per_game","targets":5},{"name":"efficiency_rating","targets":6}],"order":[],"autoWidth":false,"orderClasses":false},"selection":{"mode":"multiple","selected":null,"target":"row","selectable":null}},"evals":[],"jsHooks":[]}</script>
+</div>
+<div class="section">
+  <h2>🎯 Technical Implementation</h2>
+  <p>This dashboard demonstrates:</p>
+  <ul>
+    <li>Interactive data visualization with Plotly</li>
+    <li>Professional HTML/CSS styling</li>
+    <li>Responsive data tables with search/sort functionality</li>
+    <li>Statistical analysis and performance metrics</li>
+    <li>Modern web development practices</li>
+  </ul>
+</div>
+<div class="header">
+  <p>Built by Theomar Abbasi | Portfolio Project | GitHub: theomarabbasi</p>
+</div>
+</body>
+</html>
